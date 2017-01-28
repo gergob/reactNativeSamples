@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import HomeScene from './HomeScene';
 import {
   AppRegistry,
+  Navigator,
   StyleSheet,
   Text,
   View
@@ -16,7 +17,12 @@ import {
 export default class rnNavigator extends Component {
   render() {
     return (
-      <HomeScene />
+      <Navigator
+        initialRoute={{ title: 'My First Scene', index: 0 }}
+        renderScene={(route, navigator) => {
+          return <HomeScene title={route.title} />
+        }}
+      />
     );
   }
 }
