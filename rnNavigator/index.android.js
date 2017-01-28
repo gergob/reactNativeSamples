@@ -20,7 +20,21 @@ export default class rnNavigator extends Component {
       <Navigator
         initialRoute={{ title: 'My First Scene', index: 0 }}
         renderScene={(route, navigator) => {
-          return <HomeScene title={route.title} />
+          return <HomeScene
+            title={route.title}
+            goToNextScene={() => {
+              const nextIndex = route.index + 1;
+              navigator.push({
+                title: 'Scene ' + nextIndex,
+                index: nextIndex,
+              });
+            }}
+            goToPreviousScene={() => {
+              if (route.index > 0) {
+                navigator.pop();
+              }
+            }}
+          />
         }}
       />
     );
