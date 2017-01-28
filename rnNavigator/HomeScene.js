@@ -17,7 +17,7 @@ export default class HomeScene extends Component {
   render() {
     return (
       <View style={styles.homeScene}>
-        <Text style={styles.title}>This is {this.props.title}.</Text>
+        <Text style={styles.title}>This is {this.props.title}</Text>
       </View>
     );
   }
