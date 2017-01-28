@@ -5,7 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import { View, Text, Navigator } from 'react-native';
+import { View, Text, Navigator, StyleSheet } from 'react-native';
 
 export default class HomeScene extends Component {
   static get defaultProps() {
@@ -16,9 +16,22 @@ export default class HomeScene extends Component {
 
   render() {
     return (
-      <View>
-        <Text>This is {this.props.title}.</Text>
+      <View style={styles.homeScene}>
+        <Text style={styles.title}>This is {this.props.title}.</Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  homeScene: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: 'red'
+  },
+  title: {
+    fontSize: 30,
+    textAlign: 'center',
+    color: 'white'
+  }
+});
