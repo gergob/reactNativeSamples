@@ -21,3 +21,15 @@ Images from the project:
 ![Home Scene](/screenshots/rnNavigator/first.png?raw=true "Home Scene")
 ![Scene 1](/screenshots/rnNavigator/second.png?raw=true "Scene 1")
 ![Scene 2](/screenshots/rnNavigator/third.png?raw=true "Scene 2")
+
+
+### usingNativeAndroidComponent
+
+A Sample application for implementing Native Android component which is using Android's Toast
+class to display a message on the UI.
+
+
+Images from the project:
+
+![Simple Button](/screenshots/usingNativeAndroidComponent/android_toast_btn.png?raw=true "Home Scene")
+![Toast message](/screenshots/usingNativeAndroidComponent/android_toast_shown.png?raw=true "Home Scene")
