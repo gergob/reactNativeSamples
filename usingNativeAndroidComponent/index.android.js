@@ -9,23 +9,24 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
+
+import CustomToastAndroid from './src/nativeModules/CustomToastAndroid';
 
 export default class usingNativeAndroidComponent extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <Button
+          onPress={() => {
+            CustomToastAndroid.show('Hello from JS', CustomToastAndroid.SHORT)
+          }}
+          title="Show Toast"
+          color="#841584"
+          accessibilityLabel="Show native Android Toast message from our module"
+        />
       </View>
     );
   }
